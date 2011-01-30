@@ -1,0 +1,10 @@
+DESCRIPTION="Common UNIX Printing System (Windows driver)"
+HOMEPAGE="http://www.cups.org/"
+SRC_URI="http://ftp.easysw.com/pub/cups/windows/${P}-source.tar.bz2"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	cyginstall BUILDROOT=${D}
+}
